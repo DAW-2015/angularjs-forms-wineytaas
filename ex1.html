@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo formulário simples</title>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+  <script src="app.js"></script>  
+
+  <link rel="stylesheet" href="app.css">
+
+</head>
+<body ng-app="formExample">
+  <div ng-controller="ExampleController as exCtrl">
+    <form novalidate class="css-form" ng-submit="exCtrl.update(user)">
+      Name: <input type="text" ng-model="user.name" /><br />
+      E-mail: <input type="email" ng-model="user.email" /><br />
+      CPF: <input type="text" ng-model="user.cpf"/><br />
+      Telefone: <input type="number" ng-model="user.telefone" /><br />
+      Endereço: <input type="text" ng-model="user.endereco" /><br />
+      <input type="button" ng-click="exCtrl.reset()" value="Reset" />
+      <input type="submit" value="Save" />
+    </form>
+    <pre>user = {{user | json}}</pre>
+    <pre>master = {{exCtrl.master | json}}</pre>
+  </div>
+</body>
+</html>
