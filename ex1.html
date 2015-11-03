@@ -15,7 +15,7 @@
     <form novalidate class="css-form" ng-submit="exCtrl.update(user)">
       Name: <input type="text" ng-model="user.name" /><br />
       E-mail: <input type="email" ng-model="user.email" /><br />
-      CPF: <input type="text" ng-model="user.cpf"/><br />
+      CPF: <input type="text" ng-model="user.cpf" valida-cpf/><br />
       Telefone: <input type="number" ng-model="user.telefone" /><br />
       Endereço: <input type="text" ng-model="user.endereco" /><br />
       <input type="button" ng-click="exCtrl.reset()" value="Reset" />
